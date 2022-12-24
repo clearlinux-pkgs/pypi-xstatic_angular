@@ -4,7 +4,7 @@
 #
 Name     : pypi-xstatic_angular
 Version  : 1.8.2.2
-Release  : 4
+Release  : 5
 URL      : https://files.pythonhosted.org/packages/10/45/ef21b960ea44834912f1131d84d972210f7815c63938843c30e72be451e1/XStatic-Angular-1.8.2.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/10/45/ef21b960ea44834912f1131d84d972210f7815c63938843c30e72be451e1/XStatic-Angular-1.8.2.2.tar.gz
 Summary  : Angular 1.8.2 (XStatic packaging standard)
@@ -51,6 +51,7 @@ python3 components for the pypi-xstatic_angular package.
 cd %{_builddir}/XStatic-Angular-1.8.2.2
 pushd ..
 cp -a XStatic-Angular-1.8.2.2 buildavx2
+cp -a XStatic-Angular-1.8.2.2 buildavx512
 popd
 
 %build
@@ -58,7 +59,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1669967848
+export SOURCE_DATE_EPOCH=1671853913
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -71,8 +72,8 @@ export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 pushd ../buildavx2/
-export CFLAGS="$CFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
-export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
+export CFLAGS="$CFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 -msse2avx "
+export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 -msse2avx"
 export FFLAGS="$FFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 export FCFLAGS="$FCFLAGS -m64 -march=x86-64-v3 "
 export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3 "
@@ -87,7 +88,7 @@ echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
 pushd ../buildavx2/
-export CFLAGS="$CFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
+export CFLAGS="$CFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 -msse2avx "
 export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 export FFLAGS="$FFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 export FCFLAGS="$FCFLAGS -m64 -march=x86-64-v3 "
