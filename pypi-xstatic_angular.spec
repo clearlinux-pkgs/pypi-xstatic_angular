@@ -4,7 +4,7 @@
 #
 Name     : pypi-xstatic_angular
 Version  : 1.8.2.2
-Release  : 5
+Release  : 6
 URL      : https://files.pythonhosted.org/packages/10/45/ef21b960ea44834912f1131d84d972210f7815c63938843c30e72be451e1/XStatic-Angular-1.8.2.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/10/45/ef21b960ea44834912f1131d84d972210f7815c63938843c30e72be451e1/XStatic-Angular-1.8.2.2.tar.gz
 Summary  : Angular 1.8.2 (XStatic packaging standard)
@@ -59,7 +59,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1671853913
+export SOURCE_DATE_EPOCH=1672119351
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
