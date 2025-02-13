@@ -7,7 +7,7 @@
 #
 Name     : pypi-xstatic_angular
 Version  : 1.8.2.2
-Release  : 11
+Release  : 12
 URL      : https://files.pythonhosted.org/packages/10/45/ef21b960ea44834912f1131d84d972210f7815c63938843c30e72be451e1/XStatic-Angular-1.8.2.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/10/45/ef21b960ea44834912f1131d84d972210f7815c63938843c30e72be451e1/XStatic-Angular-1.8.2.2.tar.gz
 Summary  : Angular 1.8.2 (XStatic packaging standard)
